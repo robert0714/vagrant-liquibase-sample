@@ -10,7 +10,8 @@ This repo contains `ansible`-provisioned `vagrant` box with `liquibase` and exam
 
 DB settings:
     
-   `USERNAME=app 
+    ip: 10.0.0.20
+    USERNAME=app 
     PASSWORD=app
     URL=jdbc:postgresql://localhost:5432/app
-    driver=org.postgresql.Driver`
+    driver=org.postgresql.Driver
