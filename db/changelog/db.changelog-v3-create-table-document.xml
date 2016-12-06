@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="3" author="pkorobeinikov">
+        <createTable tableName="document">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="created_at" type="timestamp(0)" defaultValue="now()"/>
+            <column name="updated_at" type="timestamp(0)" defaultValue="now()"/>
+            <column name="person_id" type="int">
+                <constraints references="person(id)" foreignKeyName="person_id"/>
+            </column>
+            <column name="name" type="varchar(512)"/>
+            <column name="value" type="jsonb"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

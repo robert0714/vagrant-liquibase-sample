@@ -1,0 +1,3 @@
+USERNAME=app
+PASSWORD=app
+URL=jdbc:postgresql://localhost:5432/app
