@@ -3,8 +3,8 @@
 set -e
 
 echo "Installing Repository..."
-apt-get install -y software-properties-common
-apt-add-repository ppa:ansible/ansible
+apt-get install -y software-properties-common  python-software-properties 
+apt-add-repository  -y  ppa:ansible/ansible
  
  
 
